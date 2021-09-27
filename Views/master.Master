@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="iTravel.views.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="icon" href="/Images/iTravelBirdIcon.PNG">
+    <link rel="stylesheet" href="/StyleSheets/master.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="FORPRESENTATION" id="FORPRESENTATION" runat="server">
+
+    </div>
+    <a name="top"></a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                <a href="home.aspx">
+                    <span><img id="iTravelLogo" src="/Images/iTravelBird.png" /></span>
+                    <span><img id="iTravelText" src="/Images/iTravelText2.png" /></span>
+                </a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenStudentLogIn" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">TRIPS&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li><a id="tripsDropdownItem" href="studyTrips.aspx">Study Trips</a></li>
+                            <li><a id="tripsDropdownItem2" href="immersionTrips.aspx">Immersion Trips</a></li>
+                            <li><a id="tripsDropdownItem3" href="internships.aspx">Internship</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="BlogHome.aspx">BLOG</a></li>
+                </ul>
+                                <ul class="nav navbar-nav mainNav" runat="server" id="whenStudentPaid" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">In-Trip&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li><a id="tripsDropdownItem">Currently In-Trip</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="BlogHome.aspx">BLOG</a></li>
+                </ul>
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenStudentLogInAccept" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">Survey Accepted&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li><a id="tripsDropdownItem" href="StudentPayment.aspx" >Survey Accepted</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="BlogHome.aspx">BLOG</a></li>
+                </ul>
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenStudentLogInDecline" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">Survey Declined&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li> <a id="tripsDropdownItem" href="immersionTrips.aspx" style="color:#ff0000;">Survey Declined</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="BlogHome.aspx">BLOG</a></li>
+                </ul>
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenStudentawaits" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">Awaiting Results&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li> <a id="tripsDropdownItem">Awaiting Results</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="BlogHome.aspx">BLOG</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenStaffLogIn" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">TRIPS&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li><a id="tripsDropdownItem" href="ViewTrip.aspx">View Trips</a></li>
+                           
+                            <li><a id="tripsDropdownItem3" href="createInternship.aspx">Internship</a></li>
+                            <li><a id ="tripsDropdownItem3" href="PEMViewSurveyResults.aspx">Survey Results</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="BlogHome.aspx">BLOG</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenAdminLogIn" visible="False">
+                   <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">TRIPS&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li><a id="tripsDropdownItem" href="ViewTrip.aspx">Study Trips</a></li>
+                            <li><a id="tripsDropdownItem2" href="ViewTrip.aspx">Immersion Trips</a></li>
+                            <li><a id="tripsDropdownItem3" href="createInternship.aspx">Internship</a></li>
+                            <li><a id ="tripsDropdownItem3" href="StaffViewSurveyResults.aspx">Survey Results</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul class="nav navbar-nav mainNav" runat="server" id="whenParentLogIn" visible="False">
+                    <li><a href="home.aspx">HOME</a></li>
+                    <li><a id="tripsDropdownToggle" data-toggle="dropdown" data-target="">TRIPS&nbsp;&nbsp;<span class="fa fa-caret-down"></span></a>
+                        <ul id="tripsDropdown" class="dropdown-menu">
+                            <li><a id="tripsDropdownItem" href="DecisionSurveyResults.aspx">Study Trips</a></li>
+                            <li><a id="tripsDropdownItem2" href="immersionTrips.aspx">Immersion Trips</a></li>
+                            <li><a id="tripsDropdownItem3" href="internships.aspx">Internship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav secondNav">
+                    <li>
+                        <a class="userDropdownLink" data-toggle="dropdown" data-target="">
+                            <div class="overflowText userDiv1"><span id="myName" runat="server">whoAmI?</span></div>
+                            <div class="userDiv2"><span class="caret userCaret"></span></div>
+                        </a>
+                        <ul id="profileDropdown" class="dropdown-menu">
+                            <li visible="false" id="onlyStudent" runat="server"><a class="dropdownItem" href="profile.aspx"><span class="fa fa-user"></span>&nbsp;&nbsp;Profile</a></li>
+                            <li><a class="dropdownItem" href="#"><span class="fa fa-gears"></span>&nbsp;&nbsp;Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a class="dropdownItem" href="login.aspx"><span class="fa fa-sign-out"></span>&nbsp;&nbsp;Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="showOnBurger">
+                    <p id="welcome">welcome, <span id="alsoMyName" runat="server">whoAmI?</span></p>
+                    <a href="profile.aspx" class="navTopRight">Profile</a><span>|</span>
+                    <a href="#" class="navTopRight">Settings</a><span>|</span>
+                    <a href="login.aspx" class="navTopRight">Logout</a>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <div class="footer">
+        <div class="footerTop">
+            <a class="justASpan" href="#top"><span class="glyphicon glyphicon-chevron-up goUpBtn"></span></a>
+            <p>Connect With NYP</p>
+            <a href="https://www.facebook.com/nanyangpoly"><img class="socialSocial" src="/Images/Facebook.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/nyptweets"><img class="socialSocial" src="/Images/Twitter.png"></a>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/nanyangpoly/"><img class="socialSocial" src="/Images/Instagram.png"></a>
+            <br /><br />
+            <p class="footerLinks">
+                <a href="home.aspx">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">TRIPS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">FAQ</a>
+            </p>
+        </div>
+        <div class="footerBot">
+            <p class="footerText">Manage with convenience • Experience with convenience</p>
+            <p class="footerCopyright">Copyright © 2019 NYP, Singapore. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
