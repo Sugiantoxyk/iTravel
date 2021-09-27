@@ -1,0 +1,54 @@
+﻿body {
+    
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a::after{
+    text-decoration: none;
+}
+
+.divLoc{
+    border: 0;  
+    padding: 10px; 
+    font-size: 18pt; 
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    background-color: white;
+    margin: 10px;
+    width: 31%;
+    height: 255px;
+}
+
+.divLoc:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.aLoc {
+    text-decoration: none; 
+    color: black;
+}
+
+.imgLoc{
+    max-height: 200.22px;
+    max-width: 249.69px;
+}
+
+.pDiv{
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.aLoc:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.blogBG{
+    padding: 50px;
+}

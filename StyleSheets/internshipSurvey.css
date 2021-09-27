@@ -1,0 +1,14 @@
+﻿body {
+    background-color: #9fbaff;
+}
+
+.rightSector {
+    border-left: 1px solid #dcdcdc;
+    padding-left: 30px;
+}
+
+.wholeSector {
+    padding: 50px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}

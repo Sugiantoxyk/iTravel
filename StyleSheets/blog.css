@@ -1,0 +1,63 @@
+﻿body{
+    background-color: #ff9999;
+}
+
+.blogBG{
+    background-color: white;
+    padding: 50px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.post{
+    border-left: 2px solid #404040; 
+    padding: 0 20px 0 20px; 
+}
+
+.postTitle{
+    font-family: Arial !important;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.postImgDiv{
+    width: 100%;
+}
+
+.postImg{
+    max-width: 100%;
+}
+
+.postDesc{
+    font-family: Arial !important;
+    font-size: 16px;
+}
+
+.postUser{
+    
+}
+
+.postDateTime{
+    
+}
+
+.postInfo{
+    text-align: right;
+}
+
+.uniqueDate{
+    font-family: 'Lobster', cursive;
+}
+
+.postReport{
+    text-align: right;
+}
+
+.reportBtn{
+    color: black;
+    text-decoration: none;
+}
+
+.reportBtn:hover{
+    color: red;
+    text-decoration: none;
+}

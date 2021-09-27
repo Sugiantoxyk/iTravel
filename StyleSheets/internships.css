@@ -1,0 +1,25 @@
+﻿body {
+    background-color: #ebebeb;
+}
+
+.newA{
+    color:black;
+    font-size: 1.5em;
+}
+
+.newA:hover{
+    color: dimgray;
+    transition: 0.2s;
+}
+
+.internDiv {
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow: hidden;  
+}
+
+.overview {
+    white-space: pre-wrap;
+    font-size: 0.8em;
+}

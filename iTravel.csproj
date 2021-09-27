@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83C25A84-498D-48C3-8A87-C31A1CFE5F9D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iTravel</RootNamespace>
+    <AssemblyName>iTravel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\indonesia.jpg" />
+    <Content Include="Images\japan_resized.jpg" />
+    <Content Include="Images\loginBackground.png" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StyleSheets\admin.css" />
+    <Content Include="StyleSheets\blog.css" />
+    <Content Include="StyleSheets\blogCreate.css" />
+    <Content Include="StyleSheets\blogHome.css" />
+    <Content Include="StyleSheets\createInternship.css" />
+    <Content Include="StyleSheets\home.css" />
+    <Content Include="StyleSheets\internships.css" />
+    <Content Include="StyleSheets\internshipSurvey.css" />
+    <Content Include="StyleSheets\survey.css" />
+    <Content Include="StyleSheets\viewInternship.css" />
+    <Content Include="Views\addInterview.aspx" />
+    <Content Include="Views\admin.aspx" />
+    <Content Include="Views\allTrips.aspx" />
+    <Content Include="Views\Blog.aspx" />
+    <Content Include="Views\BlogHome.aspx" />
+    <Content Include="Views\choseAttend.aspx" />
+    <Content Include="Views\CreateBlogPost.aspx" />
+    <Content Include="Views\createInternship.aspx" />
+    <Content Include="Views\CreateTrip.aspx" />
+    <Content Include="Views\DecisionSurveyResults.aspx" />
+    <Content Include="Views\EditTrip.aspx" />
+    <Content Include="Views\immersionTrips.aspx" />
+    <Content Include="Views\internships.aspx" />
+    <Content Include="Views\internshipSurvey.aspx" />
+    <Content Include="Views\InternSurveyDetails.aspx" />
+    <Content Include="Views\master.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\iTravelDB.mdf" />
+    <Content Include="App_Data\iTravelDB_log.ldf">
+      <DependentUpon>iTravelDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\Facebook.png" />
+    <Content Include="Images\faceProfile.png" />
+    <Content Include="Images\Instagram.png" />
+    <Content Include="Images\iTravelBird.png" />
+    <Content Include="Images\iTravelBirdIcon.png" />
+    <Content Include="Images\iTravelText2.png" />
+    <Content Include="Images\iTravelTextNoBG.png" />
+    <Content Include="Images\japan.jpg" />
+    <Content Include="Images\Twitter.png" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="StyleSheets\login.css" />
+    <Content Include="StyleSheets\master.css" />
+    <Content Include="StyleSheets\profile.css" />
+    <Content Include="Views\home.aspx" />
+    <Content Include="Views\login.aspx" />
+    <Content Include="Views\PEMEditSurveyResults.aspx" />
+    <Content Include="Views\PEMViewSurveyResults.aspx" />
+    <Content Include="Views\profile.aspx" />
+    <Content Include="Views\reportAdd.aspx" />
+    <Content Include="Views\staffViewInternSurvey.aspx" />
+    <Content Include="Views\StaffViewSurveyResults.aspx" />
+    <Content Include="Views\StudentPayment.aspx" />
+    <Content Include="Views\studentViewTrip.aspx" />
+    <Content Include="Views\studyTrips.aspx" />
+    <Content Include="Views\tripSurvey.aspx" />
+    <Content Include="Views\viewInternship.aspx" />
+    <Content Include="Views\ViewPaidStudents.aspx" />
+    <Content Include="Views\ViewPastTripDetails.aspx" />
+    <Content Include="Views\ViewPastTrips.aspx" />
+    <Content Include="Views\ViewTrip.aspx" />
+    <Content Include="Views\ViewTripDetails.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\adminDAO.cs" />
+    <Compile Include="DAL\blogDAO.cs" />
+    <Compile Include="DAL\CheckLogin.cs" />
+    <Compile Include="DAL\createTripDAO.cs" />
+    <Compile Include="DAL\HomeInformation.cs" />
+    <Compile Include="DAL\internshipDAO.cs" />
+    <Compile Include="DAL\internSurveyDAO.cs" />
+    <Compile Include="DAL\interviewDAO.cs" />
+    <Compile Include="DAL\PaymentDAO.cs" />
+    <Compile Include="DAL\ProfileInformation.cs" />
+    <Compile Include="DAL\RetrievePemGroupDAO.cs" />
+    <Compile Include="DAL\studentTripRetrieveDAO.cs" />
+    <Compile Include="DAL\surveyResultsDAO.cs" />
+    <Compile Include="DAL\teacherViewDAO.cs" />
+    <Compile Include="DAL\TripSurveyDAO.cs" />
+    <Compile Include="Models\blog.cs" />
+    <Compile Include="Models\createTrip.cs" />
+    <Compile Include="Models\InformationModel.cs" />
+    <Compile Include="Models\internshipInfo.cs" />
+    <Compile Include="Models\internshipSurvey.cs" />
+    <Compile Include="Models\internSurveyResults.cs" />
+    <Compile Include="Models\interview.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\RetrievePemGroup.cs" />
+    <Compile Include="Models\studentTripRetrieve.cs" />
+    <Compile Include="Models\surveyResults.cs" />
+    <Compile Include="Models\teacherView.cs" />
+    <Compile Include="Models\TripSurvey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\addInterview.aspx.cs">
+      <DependentUpon>addInterview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\addInterview.aspx.designer.cs">
+      <DependentUpon>addInterview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\allTrips.aspx.cs">
+      <DependentUpon>allTrips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\allTrips.aspx.designer.cs">
+      <DependentUpon>allTrips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BlogHome.aspx.cs">
+      <DependentUpon>BlogHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BlogHome.aspx.designer.cs">
+      <DependentUpon>BlogHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\choseAttend.aspx.cs">
+      <DependentUpon>choseAttend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\choseAttend.aspx.designer.cs">
+      <DependentUpon>choseAttend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateBlogPost.aspx.cs">
+      <DependentUpon>CreateBlogPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CreateBlogPost.aspx.designer.cs">
+      <DependentUpon>CreateBlogPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\createInternship.aspx.cs">
+      <DependentUpon>createInternship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\createInternship.aspx.designer.cs">
+      <DependentUpon>createInternship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateTrip.aspx.cs">
+      <DependentUpon>CreateTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CreateTrip.aspx.designer.cs">
+      <DependentUpon>CreateTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DecisionSurveyResults.aspx.cs">
+      <DependentUpon>DecisionSurveyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DecisionSurveyResults.aspx.designer.cs">
+      <DependentUpon>DecisionSurveyResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditTrip.aspx.cs">
+      <DependentUpon>EditTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EditTrip.aspx.designer.cs">
+      <DependentUpon>EditTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\immersionTrips.aspx.cs">
+      <DependentUpon>immersionTrips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\immersionTrips.aspx.designer.cs">
+      <DependentUpon>immersionTrips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\internships.aspx.cs">
+      <DependentUpon>internships.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\internships.aspx.designer.cs">
+      <DependentUpon>internships.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\internshipSurvey.aspx.cs">
+      <DependentUpon>internshipSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\internshipSurvey.aspx.designer.cs">
+      <DependentUpon>internshipSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InternSurveyDetails.aspx.cs">
+      <DependentUpon>InternSurveyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InternSurveyDetails.aspx.designer.cs">
+      <DependentUpon>InternSurveyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PEMEditSurveyResults.aspx.cs">
+      <DependentUpon>PEMEditSurveyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PEMEditSurveyResults.aspx.designer.cs">
+      <DependentUpon>PEMEditSurveyResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PEMViewSurveyResults.aspx.cs">
+      <DependentUpon>PEMViewSurveyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PEMViewSurveyResults.aspx.designer.cs">
+      <DependentUpon>PEMViewSurveyResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\reportAdd.aspx.cs">
+      <DependentUpon>reportAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\reportAdd.aspx.designer.cs">
+      <DependentUpon>reportAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\staffViewInternSurvey.aspx.cs">
+      <DependentUpon>staffViewInternSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\staffViewInternSurvey.aspx.designer.cs">
+      <DependentUpon>staffViewInternSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffViewSurveyResults.aspx.cs">
+      <DependentUpon>StaffViewSurveyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\StaffViewSurveyResults.aspx.designer.cs">
+      <DependentUpon>StaffViewSurveyResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentPayment.aspx.cs">
+      <DependentUpon>StudentPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\StudentPayment.aspx.designer.cs">
+      <DependentUpon>StudentPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\studentViewTrip.aspx.cs">
+      <DependentUpon>studentViewTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\studentViewTrip.aspx.designer.cs">
+      <DependentUpon>studentViewTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\studyTrips.aspx.cs">
+      <DependentUpon>studyTrips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\studyTrips.aspx.designer.cs">
+      <DependentUpon>studyTrips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\tripSurvey.aspx.cs">
+      <DependentUpon>tripSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\tripSurvey.aspx.designer.cs">
+      <DependentUpon>tripSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewInternship.aspx.cs">
+      <DependentUpon>viewInternship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\viewInternship.aspx.designer.cs">
+      <DependentUpon>viewInternship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPaidStudents.aspx.cs">
+      <DependentUpon>ViewPaidStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewPaidStudents.aspx.designer.cs">
+      <DependentUpon>ViewPaidStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPastTripDetails.aspx.cs">
+      <DependentUpon>ViewPastTripDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewPastTripDetails.aspx.designer.cs">
+      <DependentUpon>ViewPastTripDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPastTrips.aspx.cs">
+      <DependentUpon>ViewPastTrips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewPastTrips.aspx.designer.cs">
+      <DependentUpon>ViewPastTrips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewTrip.aspx.cs">
+      <DependentUpon>ViewTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewTrip.aspx.designer.cs">
+      <DependentUpon>ViewTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewTripDetails.aspx.cs">
+      <DependentUpon>ViewTripDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewTripDetails.aspx.designer.cs">
+      <DependentUpon>ViewTripDetails.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\assets\bootstrap\" />
+    <Folder Include="Views\assets\formoid\" />
+    <Folder Include="Views\assets\images\" />
+    <Folder Include="Views\assets\mobirise\" />
+    <Folder Include="Views\assets\popper\" />
+    <Folder Include="Views\assets\smoothscroll\" />
+    <Folder Include="Views\assets\tether\" />
+    <Folder Include="Views\assets\theme\" />
+    <Folder Include="Views\assets\web\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49710</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49710/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

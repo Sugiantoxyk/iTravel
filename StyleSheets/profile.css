@@ -1,0 +1,163 @@
+﻿/* Main Profile Container */
+.mainProfileCont {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+}
+.profileMainName {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* All Tabs */
+/* Status Tab */
+.statusText {
+    font-size: 18px;
+    font-weight: bold;
+}
+#statusTable {
+    border: 2px solid gainsboro;
+}
+#statusTable tr td {
+    width: 90px;
+    height: 24px;
+    opacity: 0.7;
+}
+.statusBtn, .statusBtn:focus {
+    padding: 6px 15px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    color: steelblue;
+    border: 1px solid steelblue;
+    background-color: white;
+}
+.statusBtn:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+/* Profile Tab & Personal Information Tab */
+.inputName {
+    font-size: 18px;
+    font-weight: bold;
+}
+.inputs {
+    font-weight: bold;
+    padding: 5px 5px;
+    border: none;
+    border-bottom: 1px solid rgb(95, 95, 95);
+    width: 70%;
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+.inputs:focus {
+    outline: none;
+    border-bottom: 1px solid cornflowerblue;
+}
+.inputsBig {
+    font-weight: bold;
+    padding: 5px 5px;
+    border: 1px solid rgb(95, 95, 95);
+    margin-bottom: 20px;
+    margin-top: -5px;
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 200px;
+    max-height: 200px;
+}
+.inputsBig:focus {
+    outline: none;
+    border: 1px solid cornflowerblue;
+}
+.disabled {
+    background-color: white;
+}
+.editBtns, .editBtns:focus {
+    padding: 5px 15px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+    border: 2px solid gainsboro;
+    background-color: white;
+}
+.editBtns:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: rgb(250, 249, 249);
+    cursor: pointer;
+}
+.cancelUpdateBtns, .cancelUpdateBtns:focus {
+    padding: 6px 15px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    color: steelblue;
+    border: 1px solid steelblue;
+    background-color: white;
+    margin: 0 5px;
+}
+.cancelUpdateBtns:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+/* Trip History Tab */
+.historyText {
+    font-size: 18px;
+    font-weight: bold;
+}
+.historyDivs {
+    border: cornflowerblue solid 1px;
+    border-radius: 5px;
+    padding: 20px;
+}
+/* Change Password Tab */
+.changePasswordBtn, .changePasswordBtn:focus {
+    outline: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    background-color: white;
+}
+.changePasswordBtn:hover {
+    color: white;
+    background-color: cornflowerblue;
+    transition: all .1s ease-in-out;
+}
+.changePasswordInputs {
+    font-weight: bold;
+    width: 70%;
+    border-radius: 3px;
+    border: 1px solid rgb(95, 95, 95);
+    padding: 5px 5px;
+    margin-bottom: 15px;
+}
+.changePasswordInputs:focus {
+    outline: none;
+    border: 1px solid cornflowerblue;
+}
+.errorDiv {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    color: red;
+    border-left: 5px solid red;
+    background-color: #ebebeb;
+}
+.yayDiv {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    color: limegreen;
+    border-left: 5px solid limegreen;
+    background-color: #ebebeb;
+}

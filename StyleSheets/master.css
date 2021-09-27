@@ -1,0 +1,296 @@
+﻿.FORPRESENTATION {
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+* {
+    font-family: "Bahnschrift Light";
+}
+.navbar {
+    border-radius: 0 !important;
+    min-height: 90px;
+    border: none;
+    background-color: #101017 !important;
+}
+.navbar-toggle {
+    z-index: 999;
+}
+.navbar-header {
+    min-height: 90px;
+    margin-top: 20px;
+    margin-left: 0px !important;
+}
+.myBurger {
+    border: none !important;
+    background-color: white !important;
+}
+.icon-bar {
+    background-color: black;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    text-align: center;
+}
+
+/* Navbar Header */
+#iTravelLogo {
+    height: 300%;
+}
+#iTravelText {
+    height: 300%;
+}
+
+/* Navbar Box */
+#myNavbar {
+    position: relative;
+}
+
+/* Navbar Item */
+.mainNav {
+    margin-left: 100px;
+    margin-top: 60px;
+}
+.mainNav li a, .mainNav li a:focus {
+    background-color: steelblue !important;
+    color: white !important;
+    padding: 5px 40px;
+    transition: all .1s ease-in-out !important;
+    text-align: center;
+}
+.mainNav li a:hover {
+    color: black !important;
+    background-color: white !important;
+    transition: all .1s ease-in-out !important;
+}
+#current a {
+    background-color: steelblue !important;
+    color: white !important;
+}
+.secondNav {    
+    position: absolute;
+    right: 5px;
+    margin-top: 60px;
+}
+.secondNav li a, .secondNav li a:focus {
+    text-decoration: none;
+    background-color: white !important;
+    color: black !important;
+    text-align: center;
+    padding: 5px 40px;
+    transition: all .1s ease-in-out;
+}
+.secondNav li a:hover {
+    cursor: pointer;
+}
+.userDropdownLink {
+    height: 30px;
+}
+.overflowText {
+    white-space: nowrap; 
+    width: 100px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.userDiv1 {
+    float: left;
+}
+.userDiv2 {
+    float: right;
+}
+
+/* Dropdown for Trips */
+#tripsDropdownToggle {
+    cursor: pointer;
+    position: relative;
+}
+#tripsDropdown {
+    position: absolute;
+    background-color: white;
+}
+#tripsDropdownItem, #tripsDropdownItem2, #tripsDropdownItem3 {
+    background-color: white !important;
+    color: black !important;
+}
+#tripsDropdownItem:hover, #tripsDropdownItem2:hover, #tripsDropdownItem3:hover {
+    background-color: #EEE !important;
+}
+
+/* Dropdown for user */
+#profileDropdown {
+    position: absolute;
+    top: 170%;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-color: #101017;
+}
+#profileDropdown .glyphicon {
+    margin-right: 5px;
+}
+#profileDropdown .dropdownItem {
+    background-color: #101017 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-align: left;
+    padding: 3px 15px !important;
+}
+#profileDropdown .dropdownItem:hover {
+    color: white !important;
+    background-color: steelblue !important;
+}
+.divider {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+#showOnBurger {
+    display: none;
+}
+
+/* Medium size */
+@media screen and (max-width: 1003px) {
+    #iTravelText {
+        display: none;
+    }
+    .mainNav {
+        position: absolute;
+        right: 215px;
+    }
+}
+
+@media screen and (max-width: 767.5px) {
+    /* Navbar Header */
+    .navbar-header {
+        width: 100%;
+    }
+    .navbar-brand {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    /* Images */
+    #iTravelText {
+        display: none;
+    }
+    /* Burger */
+    #myNavbar {
+        text-align: center;
+    }
+    .mainNav {
+        position: relative;
+        margin-top: 20px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainNav li {
+        max-width: 765px;
+    }
+    .secondNav {
+        position: relative;
+        margin-top: 20px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .secondNav li a {
+        max-width: 765px;
+    }
+    /* Dropdown for Trips */
+    #tripsDropdown {
+        width: 100%;
+        position: relative;
+    }
+    /* Dropdown for user */
+    .secondNav {
+        display: none;
+    }
+    #showOnBurger {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    #welcome {
+    font-size: 18px;
+    }
+    .navTopRight, .navTopRight:focus {
+        color: white;
+        text-decoration: none;
+        padding: 0 5px;
+    }
+    .navTopRight:hover {
+        color: rgb(187, 187, 187);
+        text-decoration: none;
+    }
+
+}
+
+/* Footer */
+.footer {
+    font-family: Bahnschrift;
+}
+/* Go Up Arrow */
+.justASpan {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding-top: 2px;
+    border-top: 1px solid white;
+}
+.goUpBtn {
+    border: 1px solid white;
+    padding: 2px 2px 2px 3px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+.goUpBtn:hover {
+    font-size: 24px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+/* Top Footer */
+.footerTop {
+    position: relative;
+    background-color: #222222;
+    padding: 35px 0;
+    color: white;
+    text-align: center;
+}
+.socialSocial {
+    width: 40px;
+}
+.footerLinks {
+    margin: 0;
+}
+.footerLinks a {
+    text-decoration: none;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+.footerLinks a:hover {
+    text-decoration: none;
+    color: cadetblue;
+    transition: all .1s ease-in-out;
+}
+
+/* Bottom Footer */
+.footerBot {
+    background-color: cadetblue;
+    text-align: center;
+    padding: 10px 0;
+}
+.footerText {
+    color: white;
+    margin: 2px 0;
+}
+.footerCopyright {
+    font-size: 10px;
+    margin: 0;
+    color: white;
+}

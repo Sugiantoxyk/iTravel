@@ -1,0 +1,301 @@
+﻿/* FOR PARENT */
+.childrenName {
+    text-align: center;
+}
+.tripName {
+    font-weight: bold;
+}
+.tripType {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: -10px;
+}
+.tripLocation {
+    font-size: 24px;
+}
+.tripHistoryText, .tripStatusText {
+    font-size: 18px;
+}
+.staffInfo {
+    padding: 20px;
+    border: red solid 1px;
+    border-radius: 5px;
+}
+.historyDivs {
+    border: cornflowerblue solid 1px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.alignRight {
+    text-align: right;
+}
+.notesDiv {
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid #222f3e;
+}
+
+/* FOR STUDENT */
+.outingHeader {
+    font-size: 28px;
+}
+.inputBig {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+}
+.noPaddingLeft {
+    padding-left: 0;
+}
+.openOrganizer, .cancelOrganizerBtn, .openOrganizer:focus, .cancelOrganizerBtn:focus {
+    padding: 5px 15px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+    border: 2px solid gainsboro;
+    background-color: white;
+}
+.openOrganizer:hover, .cancelOrganizerBtn:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: rgb(250, 249, 249);
+    cursor: pointer;
+}
+.createOrganizerBtn, .createOrganizerBtn:focus {
+    padding: 6px 15px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    color: steelblue;
+    border: 1px solid cornflowerblue;
+    background-color: white;
+    margin: 0 5px;
+}
+.createOrganizerBtn:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+.errorDiv {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    color: red;
+    border-left: 5px solid red;
+    background-color: #ebebeb;
+}
+.yayDiv {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    color: limegreen;
+    border-left: 5px solid limegreen;
+    background-color: #ebebeb;
+}
+/* Outing List */
+.outingBlock {
+    padding: 15px 20px;
+}
+.outingBlockChild {
+    background-color: papayawhip;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+.titleColor {
+    color: indianred;
+    font-size: 20px;
+}
+.attendChoose, .notAttendChoose {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.attendChoose, .attendChoose:focus {
+    color: white;
+    background-color: limegreen;
+    border: 1px solid limegreen;
+    text-decoration: none;
+}
+.attendChoose:hover {
+    background-color: #14c214;
+    border: 1px solid #14c214;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.notAttendChoose, .notAttendChoose:focus {
+    color: white;
+    background-color: indianred;
+    border: 1px solid indianred;
+    text-decoration: none;
+}
+.notAttendChoose:hover {
+    background-color: #c63232;
+    border: 1px solid #c63232;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.greenAttending {
+    color: #14c214;
+    font-size: 18px;
+}
+/* Curfew Checker */
+.curfewTitle {
+    font-size: 28px;
+}
+.redText {
+    color: darkred;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+.curfewDiv {
+    position: relative;
+    height: 230px;
+}
+.eyeEye {
+    width: 200px;
+    height: 200px;
+    background-color: seagreen;
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 75% 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+.eyeEye2 {
+    width: 200px;
+    height: 200px;
+    background-color: seagreen;
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 75% 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+.eyeBall, .eyeBall2 {
+    width: 100px;
+    height: 100px;
+    background-color: #222f3e;
+    border-radius: 50%;
+    border: 30px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.eyeShut, .eyeShut2 {
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 999;
+}
+.eyePupil, .eyePupil:focus, .eyePupil2, .eyePupil2:focus {
+    display: block;
+    width: 100%;
+    height: 10%;
+    background-color: #222f3e;
+    border-radius: 0 0 60% 60%;
+    transition: 5s all;
+    border-top: none;
+    outline: none;
+}
+.goodText {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    color: limegreen;
+    border-left: 5px solid limegreen;
+    border-right: 5px solid limegreen;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    background-color: #ebebeb;
+}
+.badText {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    color: red;
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    background-color: #ebebeb;
+}
+
+/* For STAFF */
+.studentListTable {
+    margin-top: 30px;
+    border: 2px solid #ddd;
+}
+.fullTableColspan {
+    text-align: center;
+    font-size: 24px;
+    color: darkred;
+    padding: 50px !important;
+}
+.thead-dark {
+    background-color: #32383e;
+    color: white;
+    border: 2px solid #32383e;
+}
+.linkToProfile, .linkToProfile:focus {
+    text-decoration: none;
+    color: red;
+}
+.linkToProfile:hover {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.notesHeader {
+    font-size: 28px;
+    margin: 20px 0;
+}
+.sendNotes, .sendNotes:focus {
+    padding: 6px 15px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    color: steelblue;
+    border: 1px solid cornflowerblue;
+    background-color: white;
+    margin: 10px 5px;
+}
+.sendNotes:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+/*Ugly CSS*/
+.inTheShadow {
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    padding: 75px;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.inTheShadow:hover {
+    color: gray;
+}
